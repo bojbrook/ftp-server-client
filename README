@@ -1,0 +1,7 @@
+Bowen Brooks
+
+ftpclient.c: holds the code for running the client
+ftpserver.c: holds the code for running the server
+ftpcmd.c: holds some of the functions called by the client
+
+All of the commands work for my project. Ls isn't able to take any arguments with it but it will list all of the contents of the directory. If you control-C out of the client the server stays on but another client can't connect to it. Using the quit command allows for other clients to connect after one quits. I don't have the abort command on the server side plus i wasn't sure how to test it. The only other problem I had was the locks on the client side might get out of sync and the program goes into deadlock. This rarely happens.
